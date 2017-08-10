@@ -1,17 +1,29 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.SayJoke;
+import com.example.aayman.myapplication.backend.myApi.MyApi;
+import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.extensions.android.json.AndroidJsonFactory;
+import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
+import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+
+import java.io.IOException;
+
+import tps.com.jokelib.JokeMainActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class DisplayAds extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
+        //Toast.makeText(this, SayJoke.tellJoke(), Toast.LENGTH_SHORT).show();
+        /*MyEndpoint myEndpoint  = new MyEndpoint();
+        Intent intent = new Intent(DisplayAds.this, JokeMainActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString(getString(R.string.jokeName), myEndpoint.sayHi("abdo").getData());
+        intent.putExtras(bundle);
+        startActivity(intent);*/
         new EndpointsAsyncTask().execute(new Pair<Context, String>(this, SayJoke.tellJoke()));
     }
 
