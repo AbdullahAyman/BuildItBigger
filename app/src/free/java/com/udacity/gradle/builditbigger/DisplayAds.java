@@ -63,7 +63,7 @@ public class DisplayAds extends AppCompatActivity {
         bundle.putString(getString(R.string.jokeName), myEndpoint.sayHi("abdo").getData());
         intent.putExtras(bundle);
         startActivity(intent);*/
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, SayJoke.tellJoke()));
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this," Reviewer"));
     }
 
 }

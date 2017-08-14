@@ -39,7 +39,7 @@ public class EndPointsAsyncTaskTest {
                 }
             }
         };
-        testTask.execute(new Pair<Context, String>(context, SayJoke.tellJoke()));
+        testTask.execute(new Pair<Context, String>(context, SayJoke.tellJoke(" Reviewer")));
         latch.await();
     }
 }

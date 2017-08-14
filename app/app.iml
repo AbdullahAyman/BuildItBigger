@@ -178,11 +178,5 @@
     <orderEntry type="module" module-name="backend" exported="" />
     <orderEntry type="module" module-name="jokelib" exported="" />
     <orderEntry type="module" module-name="jokejavalib" exported="" />
-    <orderEntry type="module" module-name="backend" exported="" />
-    <orderEntry type="module" module-name="jokelib" exported="" />
-    <orderEntry type="module" module-name="jokejavalib" exported="" />
-    <orderEntry type="module" module-name="backend" exported="" />
-    <orderEntry type="module" module-name="jokelib" exported="" />
-    <orderEntry type="module" module-name="jokejavalib" exported="" />
   </component>
 </module>
